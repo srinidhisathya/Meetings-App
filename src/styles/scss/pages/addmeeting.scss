@@ -1,0 +1,26 @@
+@import '../vars';
+
+body {
+    margin-bottom: 20px;
+}
+
+.select-date {
+    width: 5%;
+}
+
+.end-msg {
+    color: $color-white;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;   
+}
+
+@media all and (max-width:$mobile-min-width) {
+    .select-date {
+        width: 20%;
+    }
+
+    .end-msg {
+        font-size: $font-size / 2;
+    }
+}

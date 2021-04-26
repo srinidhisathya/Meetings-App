@@ -1,0 +1,13 @@
+@mixin border-radius($radius : 3px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin user-select($select : none) {
+    -webkit-user-select: $select;
+    -ms-user-select: $select; 
+    user-select: $select; 
+}

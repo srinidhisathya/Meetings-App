@@ -1,0 +1,23 @@
+.btn {
+  background-color: #18A2B8;
+  color: #FFFFFF;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px;
+  outline: 0; }
+
+.excuse-btn {
+  background-color: #DC3545;
+  width: 120px;
+  height: 30px;
+  margin-left: 3px; }
+
+.add-btn {
+  display: inline-block;
+  width: 43px;
+  height: 30px; }

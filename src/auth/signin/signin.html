@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the login page">
+
+    <title>Meetings | SignIn</title>
+
+    <link rel="stylesheet" href="../../../../src/styles/external/reset.css">
+    <link rel="stylesheet" href="../../../../libs/icons/css/all.css">
+    <link rel="stylesheet" href="../../../../src/notification/notification.css">
+
+    <!-- <link rel="stylesheet" href="../../styles/external/reset.css">
+    <link rel="stylesheet" href="../../../libs/icons/css/all.css">
+    <link rel="stylesheet" href="../../notification/notification.css"> -->
+
+</head>
+
+<body class="main-login-container">
+    <main>
+        <section class="row">
+
+            <div class="col">
+
+                <h1 class="login-heading underline">Sign In</h1>
+
+                <form action="https://mymeetingsapp.herokuapp.com/api/auth/login" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="email">Email<span class="crimson">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email">
+                        <span id="email-error" class="err-msg margin-bottom-y display-none">Please Enter Your Email</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="display-block">Password<span class="crimson">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password">
+                        <span id="pwd-error" class="err-msg margin-bottom-y display-none">Please Enter Your Password</span>
+                    </div>
+
+
+                    <button class="signup-btn display-block margin-bottom-y">Submit</button>
+                    <span class="display-block">Don't have an account ?<a class="crimson" href="../signup/signup.html">Click
+                            here!</a></span>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <!-- <script src="../../notification/notification.js"></script> -->
+    <script src="../../../../src/notification/notification.js"></script>
+   
+</body>
+
+
+</html>

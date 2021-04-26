@@ -1,0 +1,13 @@
+.medium-heading {
+  font-size: 24px;
+  font-weight: 600; }
+
+.small-heading {
+  font-size: 12px; }
+
+.title-heading {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-left: 10px; }

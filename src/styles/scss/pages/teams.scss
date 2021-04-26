@@ -1,0 +1,228 @@
+@import '../vars';
+@import '../mixin';
+
+.stl-teams-heading {
+    color: $color-grey;
+    padding: 10px 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.teams{
+    width:100%;
+    margin-bottom: 2%;
+    justify-content: space-between;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+select{
+    padding-left: 5px;
+    border: $border-black;
+}
+
+strong{
+    padding-left: 0;
+}
+
+.sub-head{
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.red{
+    color: $color-red;
+}
+.team-box{
+    padding: 0 20px 0 20px;
+    @extend p;
+    border: $border-black;
+    width: 30%;
+    @include border-radius( $border-radius );
+
+    h2{
+        margin: 20px 0 10px 0;
+        font-size: 1.25rem;
+        color: $color-black;
+    }
+
+    .sub-para{
+        opacity: 0.6;
+    }
+
+    button{
+        margin: 10px 0;
+        color: $color-white;
+        background-color: $color-red;
+        border:0;
+        @include border-radius( $border-radius );
+        height: 28px;
+    }
+
+    .plus{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+
+        .add-email{
+            margin-top: 0px;
+            width: 40%;
+            height: 30px;
+            border: $border-black;
+        }
+
+        .add-team-member{
+            color: $color-white;
+            background-color: $color-green-blue;
+            margin-top: 0;
+            margin-left: 4px;
+            width: 15%;
+            height: 30px;
+        }
+    }
+
+    div{
+        button{
+            color: $color-white;
+            background-color: $color-green-blue;
+            margin-top: 0;
+            margin-left: 4px;
+            width: 40px;
+            height: 30px;
+        }
+    }
+}
+
+.plus-box{
+    
+    @include user-select(none);
+    position: relative;
+    height: 300px; 
+}
+
+
+
+.caution-red{
+    display: block;
+    color: $color-red;
+    font-size: 14px;
+}
+
+
+
+.form-background-color{
+    background-color: $color-light-blue;
+}
+
+.add-team{
+    margin-top: 5px;
+    width: 100%;
+
+    label{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    form{
+        button{
+            width: 6vw;
+            @extend .cursor;
+        }
+    }
+}
+
+
+.team-inputs{
+    margin-top: 0;
+    margin-bottom: 5px;
+    width: 90%;
+    height: 25px;
+    border: 0;
+}
+
+
+.submit-team{
+    border:0;
+    color: $color-white;
+    background-color: $color-green-blue;
+    width: 45%;
+    height: 28px;
+    margin-top:3px;
+    @extend .cursor;
+}
+
+.cancel{
+    margin: 5px 0;
+    color: $color-white;
+    background-color: $color-red;
+    border:0;
+    @include border-radius( $border-radius );
+    width: 45%;
+    height: 28px;
+}
+
+.extra{
+    align-items: center;
+}
+
+@media all and (max-width:900px){
+    .teams{
+        flex-wrap: wrap;
+    }
+    .team-box{
+        width: 45%;
+        margin-top: 2%;
+    }
+}
+
+
+
+@media all and (max-width:$mobile-min-width) {
+    .hide-nav{
+        display: none;
+    }
+    
+    .sub-head{
+        font-size: .9rem;
+    }
+    .team-box{
+        width: 100%;
+        margin-top: 2%;
+    }
+    .teams-col {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+    
+    .plus {
+        flex-basis: 30%; 
+        margin-bottom: 30px;
+
+        button{
+            padding: 60px 60px;
+        }
+    }
+
+    
+    .stl-teams-heading {
+        font-size: 1em;
+        padding-left: 3px;
+    }
+    
+}
+

@@ -1,0 +1,17 @@
+body {
+  margin-bottom: 20px; }
+
+.select-date {
+  width: 5%; }
+
+.end-msg {
+  color: #FFFFFF;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px; }
+
+@media all and (max-width: 640px) {
+  .select-date {
+    width: 20%; }
+  .end-msg {
+    font-size: 12px; } }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the page to add your meetings">
+
+    <title>Meetings | Add a Meeting</title>
+
+    <!-- <link rel="stylesheet" href="../styles/external/reset.css">
+    <link rel="stylesheet" href="../../libs/notification/notification.css">
+    <link rel="stylesheet" href="../../libs/icons/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="../../../../src/styles/external/reset.css">
+    <link rel="stylesheet" href="../../../../libs/icons/css/all.css">
+    <link rel="stylesheet" href="../../../../src/notification/notification.css">
+   
+   
+    <script src="../../../src/js/utils/authentication.js"></script>
+
+<script defer src="../../addMeeting.bundle.js"></script></head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="list-flex-row container justify-content-space-between hide">
+            <ul class="list-flex-row justify-content-space-between ">
+                <li>
+                    <a href="../calendar/calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="../meeting/addMeeting">Meetings</a>
+                </li>
+                <li>
+                    <a href="../teams/teams">Teams</a>
+                </li>
+            </ul>
+            <ul class="list-flex-row justify-content-space-between align-items-center">
+                <li>
+                    Hello
+                    <span class="nav-email"></span>
+                </li>
+                <li>
+                    <a class="nav-logout" title="logout" href="../auth/signin/signin">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="stl-mobile container">
+            <div class="mob-head">MyMeetings</div>
+            <button id="btn-mobile" aria-label="mobile button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="nav-mob" class="container hide-mobile">
+            <ul>
+                <li>
+                    <a href="../calendar/calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="../meeting/addMeeting">Meetings</a>
+                </li>
+                <li>
+                    <a href="../teams/teams">Teams</a>
+                </li>
+                <li>
+                    <a class="nav-logout" title="logout" href="../auth/signin/signin">Logout</a>
+                </li> 
+            </ul>
+        </div>
+
+    </nav>
+
+    <main class="container">
+
+        <h1 class="stl-main-heading line-break-10">Meetings</h1>
+
+        <nav class="line-break-5 underline">
+
+            <ul class="list-flex-row">
+
+                <li>
+                    <a href="../meeting/filterMeeting" class="nav-link">Filter/Search meetings</a>
+                </li>
+
+                <li class="filter-search">
+                    <a href="../meeting/addMeeting">Add a Meeting</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="form-border">
+
+            <h2 class="stl-heading line-break-10">Add a new meeting</h2>
+
+            <form action="https://mymeetingsapp.herokuapp.com/api/meetings" method="POST" class="add-meeting-form" novalidate>
+
+                <div class="form-group">
+                    <label for="mdate">Date</label>
+                    <input type="date" name="mdate" id="mdate" />
+                    <span id="date-error" class="err-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="stime" class="display-block">Start time (hh:mm)</label>
+                    <input type="number" id="stime" class="select-date" min="0" max="23" />
+
+                    <span class="display-inline-block">:</span>
+                    <label for="stime-min" class="sr-only">Start time minutes</label>
+                    <input type="number" id="stime-min" class="select-date" min="0" max="59" />
+
+                    <div id="start-hour-error" class="err-msg"></div>
+                    <div id="start-min-error" class="err-msg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="etime" class="display-block">End time (hh:mm)</label>
+                    <input type="number" id="etime" class="select-date" min="0" max="23" />
+
+                    <span class="display-inline-block">:</span>
+                    <label for="etime-min" class="sr-only">End time minutes</label>
+                    <input type="number" id="etime-min" class="select-date" min="0" max="59" />
+
+                    <div id="end-hour-error" class="err-msg"></div>
+                    <div id="end-min-error" class="err-msg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="meeting-name" class="display-block">Name</label>
+                    <input type="text" id="meeting-name" placeholder="Name of the meeting" />
+                    <span id="name-error" class="err-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="desc" class="display-block">Description</label>
+                    <textarea name="desc" id="desc" rows="3" placeholder="What is agenda of the meeting?"></textarea>
+                    <span id="desc-error" class="err-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="eid" class="display-block">EmailIDs of attendees, or team's short</label>
+                    <input type="text" id="eid" name="eid" placeholder="john@example.com, @annual-day, mark@example.com" />
+                    <span id="member-error" class="err-msg"></span>
+                </div>
+
+                <span class="end-msg" id="end-msg">Separate emailids / team short names by commas - team short names always begin with @</span>
+                <button class="btn display-block">Add meeting</button>
+
+            </form>
+
+        </div>
+
+    </main>
+    <!-- <script src="../../libs/notification/notification.js"></script>
+    <script src="../js/utils/navbar.js" type="module"></script>
+    <script src="../js/utils/mobile.js" type="module"></script> -->
+
+    <script src="../../../../src/notification/notification.js"></script>
+    
+    <script src="../../../src/js/utils/navbar.js" type="module"></script>
+    <script src="../../../src/js/utils/mobile.js"></script>
+
+</body>
+
+</html>

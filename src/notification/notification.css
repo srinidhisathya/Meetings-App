@@ -1,0 +1,56 @@
+.notifications-center {
+    position: fixed;
+    width: 40%;
+    max-width: 200px;
+}
+
+.notification {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0.5em;
+    font-size: 0.8em;
+}
+
+.notification-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.notification-title,
+.notification-description {
+    padding: 0.6em;
+}
+
+.notification-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.notification.notification-success {
+    border-color: green;
+}
+
+.notification.notification-success .notification-title {
+    background-color: green;
+}
+
+.notification.notification-info {
+    border-color: navy;
+}
+
+.notification.notification-info .notification-title {
+    background-color: navy;
+}
+
+.notification.notification-error {
+    border-color: crimson;
+}
+
+.notification.notification-error .notification-title {
+    background-color: crimson;
+}

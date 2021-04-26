@@ -1,0 +1,123 @@
+.btn {
+  background-color: #18A2B8;
+  color: #FFFFFF;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px;
+  outline: 0; }
+
+.excuse-btn {
+  background-color: #DC3545;
+  width: 120px;
+  height: 30px;
+  margin-left: 3px; }
+
+.add-btn {
+  display: inline-block;
+  width: 43px;
+  height: 30px; }
+
+.medium-heading {
+  font-size: 24px;
+  font-weight: 600; }
+
+.small-heading {
+  font-size: 12px; }
+
+.title-heading {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-left: 10px; }
+
+.display-inline-block {
+  display: inline-block; }
+
+.display-block {
+  display: block; }
+
+.display-inline {
+  display: inline; }
+
+.display-none {
+  display: none; }
+
+* {
+  box-sizing: border-box; }
+
+.form-border {
+  background-color: #73C7D5;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px; }
+
+input,
+select,
+textarea {
+  display: inline-block;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+  padding: 5px 0 5px 8px;
+  margin: 8px 0; }
+
+select:focus,
+textarea:focus {
+  border: 3px solid #55B4E0;
+  outline: 0; }
+
+.nav-link {
+  color: #3195FF; }
+
+.title-msg {
+  display: block;
+  font-weight: 400;
+  padding: 5px 0 5px 3px;
+  margin: 5px 0; }
+
+strong {
+  display: inline-block;
+  font-weight: 600;
+  padding-left: 3px; }
+
+.underline {
+  border-bottom: 1px solid #808080; }
+
+.line-break-5 {
+  margin-bottom: 5px; }
+
+.line-break-10 {
+  margin-bottom: 10px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+@media all and (max-width: 640px) {
+  .small-heading {
+    display: block; }
+  .medium-heading {
+    font-size: 21.6px; }
+  body {
+    margin-bottom: 20px; } }

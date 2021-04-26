@@ -1,0 +1,92 @@
+@import 'vars';
+@import 'button';
+@import 'headings';
+@import 'display';
+@import 'mixin';
+
+* {
+    box-sizing: border-box;
+}
+
+.form-border {
+    background-color: $color-light-blue;
+    border: 0;
+    // border-radius: $border-radius;
+    @include border-radius( $border-radius );
+    padding: 20px;
+}
+
+input,
+select,
+textarea {
+    display: inline-block;
+    width: 100%;
+    // border-radius: $border-radius;
+    @include border-radius( $border-radius );
+    border: 0;
+    outline: 0;
+    padding: 5px 0 5px 8px;
+    margin: 8px 0;
+}
+
+select:focus,
+textarea:focus {
+    border: 3px solid $color-sky-blue;
+    outline: 0;
+}
+
+.nav-link {
+    color: $color-blue;
+}
+
+.title-msg {
+    display: block;
+    font-weight: $font-weight-small;
+    padding: 5px 0 5px 3px;
+    margin: 5px 0;
+}
+
+strong {
+    display: inline-block;
+    font-weight: $font-weight-extra-large;
+    padding-left: 3px;
+}
+
+.underline {
+    border-bottom: $border-grey;
+}
+
+.line-break-5 {
+    margin-bottom: 5px;
+}
+
+.line-break-10 {
+    margin-bottom: 10px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media all and (max-width:$mobile-min-width) {
+
+    .small-heading {
+        display: block;
+    }
+
+    .medium-heading {
+        font-size: $font-size * 0.9;  // $font-size * 0.85
+    }
+
+    body {
+        margin-bottom: 20px;
+    }
+
+}

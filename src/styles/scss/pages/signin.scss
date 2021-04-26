@@ -1,0 +1,60 @@
+@import '../vars';
+
+.main-login-container {
+	background-color: $color-light-blue;
+	font-weight: $font-weight-extra-large;
+}
+.row {
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+}
+.col {
+	flex-basis: 80%;
+	padding: 0 20px 20px;
+	background-color: $color-white;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	input {
+		border-radius: 3px;
+		width: 100%;
+		padding: 10px 5px;
+		border: none;
+		outline: 0;
+		background: #5a58583d;
+	}
+}
+.crimson {
+	color: $color-red;
+	padding-left: 1px;
+}
+.login-heading {
+	text-align: center;
+	font-weight: 700;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.margin-bottom-y {
+	margin-bottom: 10px;
+}
+.signup-btn {
+	background-color: $color-green-blue;
+	color: $color-white;
+	border: 0;
+	border-radius: 4px;
+	padding: 10px;
+	outline: 0;
+	width: 100%;
+	&:hover {
+		background-color: $color-blue;
+		cursor: pointer;
+	}
+}
+@media (min-width: $mobile-min-width) {
+	.row {
+		margin-top: 20px;
+	}
+	.col {
+		flex-basis: 35%;
+	}
+}

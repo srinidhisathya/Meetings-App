@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the page to view your meetings">
+
+    <title> Meetings | Search for a Meeting</title>
+
+    <!-- <link rel="stylesheet" href="../../libs/notification/notification.css">
+    <link rel="stylesheet" href="../styles/external/reset.css">
+    <link rel="stylesheet" href="../../libs/icons/css/all.css">
+     -->
+    <link rel="stylesheet" href="../../../../src/styles/external/reset.css">
+    <link rel="stylesheet" href="../../../../libs/icons/css/all.css">
+    <link rel="stylesheet" href="../../../../src/notification/notification.css">
+     
+    <script src="../../../src/js/utils/authentication.js"></script>
+<script defer src="../../filterMeeting.bundle.js"></script></head>
+
+<body>
+    
+    <nav class="navbar">
+
+        <div class="list-flex-row container justify-content-space-between hide">
+            <ul class="list-flex-row justify-content-space-between">
+                <li>
+                    <a href="../calendar/calendar" title="calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="../meeting/addMeeting" title="meeting">Meetings</a>
+                </li>
+                <li>
+                    <a href="../teams/teams" title="teams">Teams</a>
+                </li>
+            </ul>
+
+            <ul class="list-flex-row justify-content-space-between align-items-center">
+                <li>
+                    Hello
+                    <span class="nav-email"></span>
+                </li>
+                <li>
+                    <a href="../auth/signin/signin" title="signin" class="nav-logout">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="stl-mobile container">
+            <div class="mob-head">MyMeetings</div>
+            <button id="btn-mobile" aria-label="mobile button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="nav-mob" class="container hide-mobile">
+            <ul>
+                <li>
+                    <a href="../calendar/calendar" title="calendar">Calendar</a>
+                </li>
+                <li>
+                    <a href="./filterMeeting" title="search meetings">Meetings</a>
+                </li>
+                <li>
+                    <a href="../teams/teams" title="teams">Teams</a>
+                </li>
+                <li>
+                    <a href="../auth/signin/signin" class="nav-logout" title="logout" href="signin">Logout</a>
+                </li> 
+            </ul>
+        </div>
+
+    </nav>
+
+        
+        <main class="container">
+
+            <h1 class="stl-main-heading line-break-10">Meetings</h1>
+            
+            <nav class="line-break-5 underline">
+                <ul class="list-flex-row">
+                    <li class="filter-search">
+                        <a href="../meeting/filterMeeting">Filter/Search meetings</a>
+                    </li>
+                    <li>
+                        <a href="../meeting/addMeeting" class="nav-link">Add a Meeting</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="form-border line-break-10">
+                
+                <h2 class="stl-heading line-break-10">Search for meetings</h2>
+                
+                <form action="https://mymeetingsapp.herokuapp.com/api/meetings" method="GET">
+                    <label for="date">Date</label>
+                    <select name="date" id="date">
+                        <option value="all">ALL</option>
+                        <option value="past">PAST</option>
+                        <option value="present">TODAY</option>
+                        <option value="future">UPCOMING</option>
+                    </select>   
+                    <label for="search">Search for</label>
+                    <div>
+                        <input type="search" name="search" id="search" placeholder="Search using words which describe the meeting"/>
+                    </div>
+                    <div class="line-break-10">
+                        <span id="desc-error" class="err-msg display-none">Please type word to search</span>
+                    </div>
+                    <button class="btn">Search</button>
+                </form>
+
+            </div>
+
+            <h2 class="stl-main-heading line-break-10 display-none" id="search-heading">Meetings matching search criteria</h2>
+            <div class="search-results"></div>
+            
+        </main>
+        
+        <!-- <script src="../../libs/notification/notification.js"></script>
+        <script src="../js/utils/navbar.js" type="module"></script>
+        <script src="../js/utils/mobile.js" type="module"></script>
+         -->
+        
+         <script src="../../../../src/notification/notification.js"></script>
+       
+         <script src="../../../src/js/utils/navbar.js" type="module"></script>
+        <script src="../../../src/js/utils/mobile.js"></script>
+
+    </body>
+
+</html>

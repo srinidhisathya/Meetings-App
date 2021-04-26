@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the registration page">
+
+    <title>Meetings | SignUp</title>
+
+    <link rel="stylesheet" href="../../styles/external/reset.css">
+    <link rel="stylesheet" href="../../../libs/notification/notification.css">
+    <link rel="stylesheet" href="../../../libs/icons/css/all.css">
+  
+
+<script defer src="../../../signup.bundle.js"></script></head>
+
+<body class="main-login-container">
+    <main>
+        <section class="row">
+
+            <div class="col">
+
+                <h1 class="login-heading underline">Sign Up</h1>
+
+                <form action="https://mymeetingsapp.herokuapp.com/api/auth/register" method="POST" name="register"
+                    novalidate>
+                    <div class="form-group">
+                        <label for="name">Name<span class="crimson">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" />
+                        <span id="name-error" class="err-msg margin-bottom-y display-none">Please Enter Your Name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email<span class="crimson">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" />
+                        <span id="email-error" class="err-msg margin-bottom-y display-none">Please Enter Your Email</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="display-block">Password<span class="crimson">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Enter A Password" />
+                        <span id="pwd-error" class="err-msg margin-bottom-y display-none">Please Enter Your Password</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="display-block">Confirm Password<span
+                                class="crimson">*</span></label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            placeholder="Re-enter Password" />
+                        <span id="cpwd-error" class="err-msg margin-bottom-y display-none">Please Enter Your Password</span>
+                    </div>
+
+                    <button class="signup-btn display-block margin-bottom-y" type="submit">Submit</button>
+                    <span class="display-block">Already have an account ?<a class="crimson" href="../signin/signin.html">Click
+                            here!</a></span>
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- <script src="../../../libs/notification/notification.js"></script> -->
+    <script src="../../../../src/notification/notification.js"></script>
+</body>
+
+</html>

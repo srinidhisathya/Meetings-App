@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is the calendar page">
+
+        <title>Meetings | Calendar</title>
+<!-- 
+        <link rel="stylesheet" href="../styles/external/reset.css">
+        <link rel="stylesheet" href="../../libs/notification/notification.css">
+        <link rel="stylesheet" href="../../libs/icons/css/all.min.css">
+         -->
+
+        <link rel="stylesheet" href="../../../../src/styles/external/reset.css">
+        <link rel="stylesheet" href="../../../../libs/icons/css/all.css">
+        <link rel="stylesheet" href="../../../../src/notification/notification.css">
+        
+        <script src="../../../src/js/utils/authentication.js"></script>
+    <script defer src="../../calendar.bundle.js"></script></head>
+
+    <body>
+       
+        <nav class="navbar">
+
+            <div class="list-flex-row container justify-content-space-between hide">
+                <ul class="list-flex-row justify-content-space-between">
+                    <li>
+                        <a href="calendar">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="../meeting/addMeeting">Meetings</a>
+                    </li>
+                    <li>
+                        <a href="../teams/teams">Teams</a>
+                    </li>   
+                </ul>
+
+                <ul class="list-flex-row justify-content-space-between align-items-center">
+                    <li>
+                        Hello <span class="nav-email"></span>
+                    </li>
+                    <li>
+                        <a class="nav-logout" title="logout" href="../auth/signin/signin">Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="stl-mobile container">
+                <div class="mob-head">MyMeetings</div> 
+                <button id="btn-mobile" aria-label="mobile button">
+                    <i class="fas fa-bars"></i>    
+                </button>  
+            </div>
+
+            <div id="nav-mob" class="container hide-mobile">
+                <ul>
+                    <li>
+                        <a href="calendar">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="../meeting/addMeeting">Meetings</a>
+                    </li>
+                    <li>
+                        <a href="../teams/teams">Teams</a>
+                    </li> 
+                    <li>
+                        <a class="nav-logout" title="logout" href="../auth/signin/signin">Logout</a>
+                    </li>  
+                </ul>
+            </div>
+
+        </nav>
+                
+        
+        <main>
+
+            <section class="container">
+                <h1 class="stl-main-heading">Calendar</h1>
+                
+                <div class="list-flex-row justify-content-space-between aligin-items-center">
+                    <div>
+                        <span id="readable-date" class="medium-heading"></span>
+                        <span id="weekday" class="small-heading"></span>
+                    </div>
+                    <div class="stl-date">
+                        <label for="today" class="sr-only">Select Date</label>
+                        <input type="date" name="today" id="today" value="2020-12-09"/>
+                    </div>
+                </div>
+            </section>
+
+            <div>
+                <div class="bar"><span class="zero-to-nine">0</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">1</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">2</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">3</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">4</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">5</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">6</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">7</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">8</span><div class="hour"></div></div>
+                <div class="bar"><span class="zero-to-nine">9</span><div class="hour"></div></div>
+                <div class="bar"><span>10</span><div class="hour"></div></div>
+                <div class="bar"><span>11</span><div class="hour"></div></div>
+                <div class="bar"><span>12</span><div class="hour"></div></div>
+                <div class="bar"><span>13</span><div class="hour"></div></div>
+                <div class="bar"><span>14</span><div class="hour"></div></div>
+                <div class="bar"><span>15</span><div class="hour"></div></div>
+                <div class="bar"><span>16</span><div class="hour"></div></div>
+                <div class="bar"><span>17</span><div class="hour"></div></div>
+                <div class="bar"><span>18</span><div class="hour"></div></div>
+                <div class="bar"><span>19</span><div class="hour"></div></div>
+                <div class="bar"><span>20</span><div class="hour"></div></div>
+                <div class="bar"><span>21</span><div class="hour"></div></div>
+                <div class="bar"><span>22</span><div class="hour"></div></div>
+                <div class="bar"><span>23</span><div class="hour"></div></div>
+            </div>
+        </main>
+        
+        <!-- <script src="../../libs/notification/notification.js"></script> -->
+        <script src="../../../../src/notification/notification.js"></script>
+        <script src="../../../src/js/utils/navbar.js" type="module"></script>
+        <script src="../../../src/js/utils/mobile.js"></script>
+        <!-- <script src="../js/utils/navbar.js" type="module"></script> -->
+        <!-- <script src="../js/utils/mobile.js" type="module"></script> -->
+        
+
+    </body>
+</html>
